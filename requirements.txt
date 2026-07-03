@@ -1,5 +1,5 @@
-tensorflow>=2.15.0
-tf-keras
+tensorflow==2.21.0
+keras==3.14.1
 opencv-python
 albumentations
 pandas
