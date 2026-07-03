@@ -31,11 +31,11 @@ export default function Dashboard() {
     // Poll for async XAI updates every 3 seconds if status is completed (XAI might be pending)
     const interval = setInterval(async () => {
       try {
-        const res = await fetch(`http://localhost:8000/api/scan/${id}/status`)
+        const res = await fetch(`${API_BASE_URL}/api/scan/${id}/status`)
         const statusData = await res.json()
         if (statusData.status === 'xai_completed' || statusData.status === 'xai_failed') {
           // Re-fetch full data
-          const fullRes = await fetch(`http://localhost:8000/api/scan/${id}`)
+          const fullRes = await fetch(`${API_BASE_URL}/api/scan/${id}`)
           const fullResult = await fullRes.json()
           setData(fullResult)
           clearInterval(interval)
@@ -55,15 +55,15 @@ export default function Dashboard() {
   }
 
   const tabs = [
-    { id: 'original', label: 'Original', src: `http://localhost:8000${data.image_path}` },
-    ...(data.hair_removed_path ? [{ id: 'hair_removed', label: 'Hair Removed', src: `http://localhost:8000${data.hair_removed_path}` }] : []),
-    ...(data.clahe_path ? [{ id: 'clahe', label: 'CLAHE', src: `http://localhost:8000${data.clahe_path}` }] : []),
-    ...(data.lesion_mask_path ? [{ id: 'lesion_mask', label: 'Lesion Mask', src: `http://localhost:8000${data.lesion_mask_path}` }] : []),
-    ...(data.gradcam_path ? [{ id: 'gradcam', label: 'GradCAM', src: `http://localhost:8000${data.gradcam_path}` }] : []),
-    ...(data.gradcam_plus_plus_path ? [{ id: 'gradcam++', label: 'GradCAM++', src: `http://localhost:8000${data.gradcam_plus_plus_path}` }] : []),
-    ...(data.shap_path ? [{ id: 'shap', label: 'SHAP', src: `http://localhost:8000${data.shap_path}` }] : []),
-    ...(data.ig_path ? [{ id: 'ig', label: 'Integrated Gradients', src: `http://localhost:8000${data.ig_path}` }] : []),
-    ...(data.lime_path ? [{ id: 'lime', label: 'LIME', src: `http://localhost:8000${data.lime_path}` }] : []),
+    { id: 'original', label: 'Original', src: `${API_BASE_URL}${data.image_path}` },
+    ...(data.hair_removed_path ? [{ id: 'hair_removed', label: 'Hair Removed', src: `${API_BASE_URL}${data.hair_removed_path}` }] : []),
+    ...(data.clahe_path ? [{ id: 'clahe', label: 'CLAHE', src: `${API_BASE_URL}${data.clahe_path}` }] : []),
+    ...(data.lesion_mask_path ? [{ id: 'lesion_mask', label: 'Lesion Mask', src: `${API_BASE_URL}${data.lesion_mask_path}` }] : []),
+    ...(data.gradcam_path ? [{ id: 'gradcam', label: 'GradCAM', src: `${API_BASE_URL}${data.gradcam_path}` }] : []),
+    ...(data.gradcam_plus_plus_path ? [{ id: 'gradcam++', label: 'GradCAM++', src: `${API_BASE_URL}${data.gradcam_plus_plus_path}` }] : []),
+    ...(data.shap_path ? [{ id: 'shap', label: 'SHAP', src: `${API_BASE_URL}${data.shap_path}` }] : []),
+    ...(data.ig_path ? [{ id: 'ig', label: 'Integrated Gradients', src: `${API_BASE_URL}${data.ig_path}` }] : []),
+    ...(data.lime_path ? [{ id: 'lime', label: 'LIME', src: `${API_BASE_URL}${data.lime_path}` }] : []),
   ]
 
   let riskColor = "bg-emerald-100 text-emerald-700"
@@ -87,7 +87,7 @@ export default function Dashboard() {
               <Share2 className="w-4 h-4" /> <span>Share</span>
             </button>
             <button 
-              onClick={() => window.open(`http://localhost:8000/api/scan/${id}/report`, '_blank')}
+              onClick={() => window.open(`${API_BASE_URL}/api/scan/${id}/report`, '_blank')}
               className="flex items-center space-x-2 px-5 py-2 bg-blue-600 text-white rounded-xl shadow-md font-semibold hover:bg-blue-700 transition"
             >
               <Download className="w-4 h-4" /> <span>PDF Report</span>

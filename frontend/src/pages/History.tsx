@@ -39,7 +39,7 @@ export default function History() {
 
   const handleDelete = async (id: string) => {
     try {
-      await fetch(`http://localhost:8000/api/history/${id}`, { method: 'DELETE' })
+      await fetch(`${API_BASE_URL}/api/history/${id}`, { method: 'DELETE' })
       setHistory(prev => prev.filter(item => item.id !== id))
     } catch (err) {
       console.error(err)
@@ -143,7 +143,7 @@ export default function History() {
                       <td className="p-5 pr-6">
                         <div className="flex items-center justify-end space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
                           <button 
-                            onClick={() => window.open(`http://localhost:8000/api/scan/${item.id}/report`, '_blank')}
+                            onClick={() => window.open(`${API_BASE_URL}/api/scan/${item.id}/report`, '_blank')}
                             className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors tooltip"
                             title="Download PDF"
                           >

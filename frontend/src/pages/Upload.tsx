@@ -44,7 +44,7 @@ export default function Upload() {
 
       // 2. Validate
       setStatus('validating')
-      const valRes = await fetch(`http://localhost:8000/api/validate/${scan_id}`, { method: 'POST' })
+      const valRes = await fetch(`${API_BASE_URL}/api/validate/${scan_id}`, { method: 'POST' })
       const valData = await valRes.json()
       if (!valData.is_valid) {
         setStatus('error')
@@ -54,7 +54,7 @@ export default function Upload() {
 
       // 3. Quality
       setStatus('quality')
-      const qualRes = await fetch(`http://localhost:8000/api/quality/${scan_id}`, { method: 'POST' })
+      const qualRes = await fetch(`${API_BASE_URL}/api/quality/${scan_id}`, { method: 'POST' })
       const qualData = await qualRes.json()
       if (qualData.quality_score < 30) {
         setStatus('error')
@@ -64,13 +64,13 @@ export default function Upload() {
 
       // 4. Detection
       setStatus('detection')
-      const detRes = await fetch(`http://localhost:8000/api/detect/${scan_id}`, { method: 'POST' })
+      const detRes = await fetch(`${API_BASE_URL}/api/detect/${scan_id}`, { method: 'POST' })
       const detData = await detRes.json()
       // We no longer halt the pipeline if lesion_detected is false. We allow it to proceed to prediction anyway.
 
       // 5. Prediction
       setStatus('predicting')
-      const predRes = await fetch(`http://localhost:8000/api/predict/${scan_id}`, { method: 'POST' })
+      const predRes = await fetch(`${API_BASE_URL}/api/predict/${scan_id}`, { method: 'POST' })
       if (!predRes.ok) throw new Error("Failed during prediction")
       
       setStatus('success')
