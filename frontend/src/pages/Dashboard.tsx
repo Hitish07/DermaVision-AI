@@ -1,3 +1,5 @@
+
+import { API_BASE_URL } from '../config'
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import { ShieldAlert, AlertTriangle, ArrowLeft, Download, Share2, Activity, Loader2 } from 'lucide-react'
@@ -14,7 +16,7 @@ export default function Dashboard() {
   useEffect(() => {
     const fetchScan = async () => {
       try {
-        const res = await fetch(`http://localhost:8000/api/scan/${id}`)
+        const res = await fetch(`${API_BASE_URL}/api/scan/${id}`)
         if (!res.ok) throw new Error("Failed to fetch scan results")
         const result = await res.json()
         setData(result)

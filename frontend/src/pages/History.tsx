@@ -1,3 +1,4 @@
+import { API_BASE_URL } from '../config'
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Trash2, ExternalLink, Calendar, Search, ArrowLeft, Download } from 'lucide-react'
@@ -22,7 +23,7 @@ export default function History() {
 
   const fetchHistory = async () => {
     try {
-      const res = await fetch('http://localhost:8000/api/history')
+      const res = await fetch(`${API_BASE_URL}/api/history`)
       const data = await res.json()
       setHistory(data)
     } catch (err) {

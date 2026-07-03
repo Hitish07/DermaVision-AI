@@ -1,3 +1,4 @@
+import { API_BASE_URL } from '../config'
 import { useState, useCallback } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useDropzone } from 'react-dropzone'
@@ -34,7 +35,7 @@ export default function Upload() {
       setStatus('uploading')
       const formData = new FormData()
       formData.append('file', file)
-      const uploadRes = await fetch('http://localhost:8000/api/upload', {
+      const uploadRes = await fetch(`${API_BASE_URL}/api/upload`, {
         method: 'POST',
         body: formData,
       })
