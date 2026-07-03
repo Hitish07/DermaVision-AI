@@ -9,6 +9,7 @@ from pathlib import Path
 from ..database import get_db
 from ..models import ScanHistory
 from ..schemas import ValidationResponse, QualityResponse, DetectionResponse, PredictResponse, AsyncXAIResponse, FullScanDetails
+from ..auth import get_current_user
 
 from ..services.validation import ImageValidator
 from ..services.quality_assessment import assess_image_quality
@@ -26,35 +27,47 @@ validator = ImageValidator()
 detector = LesionDetector()
 
 @router.post("/api/upload")
-async def upload_image(file: UploadFile = File(...), db: Session = Depends(get_db)):
+async def upload_image(
+    file: UploadFile = File(...),
+    db: Session = Depends(get_db),
+    current_user: str = Depends(get_current_user)
+):
     scan_id = str(uuid.uuid4())
     file_extension = file.filename.split('.')[-1]
     image_path = UPLOAD_DIR / f"{scan_id}.{file_extension}"
-    
+
     with open(image_path, "wb") as buffer:
         shutil.copyfileobj(file.file, buffer)
-        
+
     db_item = ScanHistory(
         id=scan_id,
+        user_id=current_user,
         image_path=str(image_path),
         status="uploaded"
     )
     db.add(db_item)
     db.commit()
-    
+
     return {"scan_id": scan_id, "image_path": str(image_path)}
 
 @router.post("/api/validate/{scan_id}", response_model=ValidationResponse)
-def validate_scan(scan_id: str, db: Session = Depends(get_db)):
+def validate_scan(
+    scan_id: str,
+    db: Session = Depends(get_db),
+    current_user: str = Depends(get_current_user)
+):
     item = db.query(ScanHistory).filter(ScanHistory.id == scan_id).first()
-    if not item: raise HTTPException(status_code=404, detail="Scan not found")
-    
+    if not item:
+        raise HTTPException(status_code=404, detail="Scan not found")
+    if item.user_id != current_user:
+        raise HTTPException(status_code=403, detail="You can only validate your own scans")
+
     val_res = validator.validate(item.image_path)
-    
+
     item.is_dermoscopic = (val_res["image_type"] == "Dermoscopic")
     item.is_smartphone = (val_res["image_type"] == "Smartphone")
     db.commit()
-    
+
     return ValidationResponse(
         is_valid=val_res["is_valid"],
         reason=val_res["reason"],
@@ -63,12 +76,19 @@ def validate_scan(scan_id: str, db: Session = Depends(get_db)):
     )
 
 @router.post("/api/quality/{scan_id}", response_model=QualityResponse)
-def quality_scan(scan_id: str, db: Session = Depends(get_db)):
+def quality_scan(
+    scan_id: str,
+    db: Session = Depends(get_db),
+    current_user: str = Depends(get_current_user)
+):
     item = db.query(ScanHistory).filter(ScanHistory.id == scan_id).first()
-    if not item: raise HTTPException(status_code=404, detail="Scan not found")
-    
+    if not item:
+        raise HTTPException(status_code=404, detail="Scan not found")
+    if item.user_id != current_user:
+        raise HTTPException(status_code=403, detail="You can only assess quality of your own scans")
+
     q_res = assess_image_quality(item.image_path)
-    
+
     item.quality_score = q_res.get("quality_score", 0)
     item.blur_score = q_res.get("blur_score", "Unknown")
     item.brightness = q_res.get("brightness", "Unknown")
@@ -76,21 +96,28 @@ def quality_scan(scan_id: str, db: Session = Depends(get_db)):
     item.noise = q_res.get("noise", "Unknown")
     item.resolution = q_res.get("resolution", "Unknown")
     db.commit()
-    
+
     return QualityResponse(**q_res)
 
 @router.post("/api/detect/{scan_id}", response_model=DetectionResponse)
-def detect_lesion(scan_id: str, db: Session = Depends(get_db)):
+def detect_lesion(
+    scan_id: str,
+    db: Session = Depends(get_db),
+    current_user: str = Depends(get_current_user)
+):
     item = db.query(ScanHistory).filter(ScanHistory.id == scan_id).first()
-    if not item: raise HTTPException(status_code=404, detail="Scan not found")
-    
+    if not item:
+        raise HTTPException(status_code=404, detail="Scan not found")
+    if item.user_id != current_user:
+        raise HTTPException(status_code=403, detail="You can only detect lesions in your own scans")
+
     has_lesion, msg = detector.detect(item.image_path, scan_id)
-    
+
     item.hair_removed_path = f"figures/{scan_id}_hair_removed.jpg"
     item.clahe_path = f"figures/{scan_id}_clahe.jpg"
     item.lesion_mask_path = f"figures/{scan_id}_lesion_mask.jpg"
     db.commit()
-    
+
     return DetectionResponse(
         lesion_detected=has_lesion,
         message=msg,
@@ -102,16 +129,24 @@ def detect_lesion(scan_id: str, db: Session = Depends(get_db)):
     )
 
 @router.post("/api/predict/{scan_id}", response_model=PredictResponse)
-def predict_scan(scan_id: str, background_tasks: BackgroundTasks, db: Session = Depends(get_db)):
+def predict_scan(
+    scan_id: str,
+    background_tasks: BackgroundTasks,
+    db: Session = Depends(get_db),
+    current_user: str = Depends(get_current_user)
+):
     item = db.query(ScanHistory).filter(ScanHistory.id == scan_id).first()
-    if not item: raise HTTPException(status_code=404, detail="Scan not found")
-    
+    if not item:
+        raise HTTPException(status_code=404, detail="Scan not found")
+    if item.user_id != current_user:
+        raise HTTPException(status_code=403, detail="You can only predict on your own scans")
+
     results, proc_time, gradcam_path = run_prediction_sync(item.image_path)
     top_prediction = results[0]
-    
+
     disease = top_prediction["class_name"]
     risk, rec = get_clinical_recommendation(disease)
-        
+
     item.predicted_class = disease
     item.confidence = top_prediction["confidence"]
     item.risk_level = risk
@@ -121,12 +156,11 @@ def predict_scan(scan_id: str, background_tasks: BackgroundTasks, db: Session = 
     item.top_predictions = json.dumps(results)
     item.gradcam_path = f"figures/MobileNetV2_gradcam_{os.path.basename(item.image_path)}"
     item.status = "completed"
-    
+
     db.commit()
-    
-    # Async heavy XAI
+
     background_tasks.add_task(run_async_xai, scan_id, item.image_path)
-    
+
     from ..schemas import PredictionOutput
     return PredictResponse(
         disease=disease,
@@ -137,10 +171,17 @@ def predict_scan(scan_id: str, background_tasks: BackgroundTasks, db: Session = 
     )
 
 @router.get("/api/scan/{scan_id}/status", response_model=AsyncXAIResponse)
-def get_scan_status(scan_id: str, db: Session = Depends(get_db)):
+def get_scan_status(
+    scan_id: str,
+    db: Session = Depends(get_db),
+    current_user: str = Depends(get_current_user)
+):
     item = db.query(ScanHistory).filter(ScanHistory.id == scan_id).first()
-    if not item: raise HTTPException(status_code=404, detail="Scan not found")
-        
+    if not item:
+        raise HTTPException(status_code=404, detail="Scan not found")
+    if item.user_id != current_user:
+        raise HTTPException(status_code=403, detail="You can only view status of your own scans")
+
     return AsyncXAIResponse(
         status=item.status,
         shap_path=f"/{item.shap_path}" if item.shap_path else None,
@@ -150,10 +191,17 @@ def get_scan_status(scan_id: str, db: Session = Depends(get_db)):
     )
 
 @router.get("/api/scan/{scan_id}", response_model=FullScanDetails)
-def get_scan_details(scan_id: str, db: Session = Depends(get_db)):
+def get_scan_details(
+    scan_id: str,
+    db: Session = Depends(get_db),
+    current_user: str = Depends(get_current_user)
+):
     item = db.query(ScanHistory).filter(ScanHistory.id == scan_id).first()
-    if not item: raise HTTPException(status_code=404, detail="Scan not found")
-    
+    if not item:
+        raise HTTPException(status_code=404, detail="Scan not found")
+    if item.user_id != current_user:
+        raise HTTPException(status_code=403, detail="You can only view details of your own scans")
+
     import json
     return FullScanDetails(
         id=item.id,
@@ -186,10 +234,17 @@ def get_scan_details(scan_id: str, db: Session = Depends(get_db)):
     )
 
 @router.get("/api/scan/{scan_id}/report")
-def get_pdf_report_endpoint(scan_id: str, db: Session = Depends(get_db)):
+def get_pdf_report_endpoint(
+    scan_id: str,
+    db: Session = Depends(get_db),
+    current_user: str = Depends(get_current_user)
+):
     item = db.query(ScanHistory).filter(ScanHistory.id == scan_id).first()
-    if not item: raise HTTPException(status_code=404, detail="Scan not found")
-        
+    if not item:
+        raise HTTPException(status_code=404, detail="Scan not found")
+    if item.user_id != current_user:
+        raise HTTPException(status_code=403, detail="You can only download reports for your own scans")
+
     import json
     scan_data = {
         "scan_id": item.id,
@@ -205,7 +260,7 @@ def get_pdf_report_endpoint(scan_id: str, db: Session = Depends(get_db)):
         "original_image": item.image_path,
         "gradcam_image": item.gradcam_path if item.gradcam_path else ""
     }
-    
+
     try:
         pdf_path = generate_pdf_report(scan_data)
         return FileResponse(pdf_path, media_type="application/pdf", filename=f"DermaVision_Report_{scan_id}.pdf")
