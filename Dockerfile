@@ -19,7 +19,7 @@ RUN pip install fastapi uvicorn sqlalchemy python-multipart pydantic
 COPY . .
 
 # Expose port
-EXPOSE 8000
+EXPOSE 7860
 
 # Run Uvicorn
-CMD uvicorn api.main:app --host 0.0.0.0 --port $PORT
+CMD uvicorn api.main:app --host 0.0.0.0 --port 7860
