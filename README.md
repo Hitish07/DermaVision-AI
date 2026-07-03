@@ -1,3 +1,12 @@
+---
+title: DermaVision AI Backend
+emoji: 🔬
+colorFrom: blue
+colorTo: indigo
+sdk: docker
+pinned: false
+---
+
 # DermaVision AI
 
 A professional real-world Clinical Decision Support Platform for Skin Lesion Analysis, built with TensorFlow, FastAPI, and React.
@@ -22,5 +31,5 @@ DermaVision AI utilizes a robust 4-stage pipeline to ensure clinical integrity:
 
 **MEDICAL DISCLAIMER**: DermaVision AI is an experimental clinical decision-support tool designed for educational and research purposes. It is **NOT** FDA approved and should **never** be used as a substitute for professional medical diagnosis.
 
-* **Dataset Bias**: The model is trained strictly on the HAM10000 dataset, which consists primarily of dermoscopic images. Predictions made on ordinary smartphone photographs have significantly reduced reliability. 
+* **Dataset Bias**: The model is trained strictly on the HAM10000 dataset, which consists primarily of dermoscopic images. Predictions made on ordinary smartphone photographs have significantly reduced reliability.
 * **Heuristic Limitations**: The lesion detection pipeline utilizes classical computer vision (OpenCV). While highly effective, it may struggle with extreme edge cases (e.g., heavy shadows, extreme hair). Future upgrades may replace this with a dedicated YOLOv8 segmentation model.
