@@ -1,10 +1,13 @@
+import Register from './pages/Register'
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
 import LandingPage from './pages/LandingPage'
 import Dashboard from './pages/Dashboard'
 import Upload from './pages/Upload'
 import History from './pages/History'
 import Documentation from './pages/Documentation'
+
 import Login from './pages/Login'
+
 
 function ProtectedRoute({ children }: { children: React.ReactNode }) {
   const token = localStorage.getItem('token')
@@ -16,6 +19,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
+	<Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route
           path="/upload"
