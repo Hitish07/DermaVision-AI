@@ -1,0 +1,16 @@
+tensorflow>=2.15.0
+tf-keras
+opencv-python
+albumentations
+pandas
+numpy
+matplotlib
+seaborn
+scikit-learn
+transformers
+tf2onnx
+shap
+lime
+vit_keras
+tensorboard  
+ 

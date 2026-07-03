@@ -1,0 +1,65 @@
+SKIN SCAN AI - PROJECT OVERVIEW DOCUMENT
+========================================
+This document explains the core components of the Skin Scan AI project. It breaks down every major part of the system by answering: WHAT it is, WHY it is used, HOW it works, and WHERE to find it in the project folders.
+
+--------------------------------------------------
+1. THE DEEP LEARNING MODEL (CUSTOM CNN)
+--------------------------------------------------
+* WHAT it is: 
+  A Custom 3-Block Convolutional Neural Network (CNN) built from scratch.
+* WHY we need it: 
+  To automatically analyze images of skin lesions and classify them into 7 different categories of skin cancer or benign spots without relying on human doctors.
+* HOW it works: 
+  It takes a 64x64 pixel image, passes it through convolutional layers (which find edges, colors, and shapes), shrinks it with max-pooling, and outputs 7 probability scores using a softmax activation function.
+* WHERE to find it: 
+  - Training logic: /src and /notebooks
+  - Saved model file: /models (e.g., MobileNetV2_final.keras)
+
+--------------------------------------------------
+2. DATA BALANCING (OVERSAMPLING)
+--------------------------------------------------
+* WHAT it is: 
+  A technique used to artificially create more copies of rare skin conditions in the dataset.
+* WHY we need it: 
+  The original HAM10000 dataset is highly imbalanced (e.g., thousands of normal moles, but only 115 dermatofibroma cases). Without this, the model would only guess "normal mole" every time to get a high score.
+* HOW it works: 
+  It duplicates images from minority classes randomly until every single class has exactly 6,705 images. This forces the model to learn rare cancers with the exact same focus as common ones.
+* WHERE to find it: 
+  - Data processing scripts: /src 
+
+--------------------------------------------------
+3. GRAD-CAM (EXPLAINABLE AI)
+--------------------------------------------------
+* WHAT it is: 
+  Gradient-weighted Class Activation Mapping. It generates a visual heatmap over the original skin image.
+* WHY we need it: 
+  Doctors will not trust a "black box" AI. Grad-CAM shows exactly *which part* of the skin spot the AI looked at to make its decision, proving that it isn't just looking at the background.
+* HOW it works: 
+  It traces the gradients of the model's final prediction back to the last Convolutional layer, figuring out which pixels fired the strongest signals. It then overlays a colorful map (red = high focus, blue = low focus) onto the image.
+* WHERE to find it: 
+  - Code: /src/explainability.py
+  - Output images: /figures
+
+--------------------------------------------------
+4. BACKEND API SERVER (FASTAPI)
+--------------------------------------------------
+* WHAT it is: 
+  The core server engine that connects the deep learning model to the internet.
+* WHY we need it: 
+  The React frontend cannot run heavy AI models directly. The backend securely holds the model, receives images from the frontend, runs the prediction, and sends the results back instantly.
+* HOW it works: 
+  It runs a FastAPI web server (using Uvicorn) on port 8000. It has endpoints (like /scan) that accept an image file, resize it to 64x64, run model.predict(), generate the Grad-CAM heatmap, and return a JSON response.
+* WHERE to find it: 
+  - Code: /api/main.py and /api/routers/scan.py
+
+--------------------------------------------------
+5. FRONTEND USER INTERFACE (REACT.JS)
+--------------------------------------------------
+* WHAT it is: 
+  The graphical website where patients or doctors actually interact with the AI.
+* WHY we need it: 
+  We need an easy, beautiful, and secure way for non-technical people to use the AI without knowing how to write Python code.
+* HOW it works: 
+  Built using React, it provides a drag-and-drop file upload screen. When a user uploads an image, the React app sends it to the FastAPI backend. It then takes the JSON response and displays the disease name, risk level, confidence bar chart, and the Grad-CAM heatmap on the screen.
+* WHERE to find it: 
+  - Entire application: /frontend directory (run via `npm run dev`)

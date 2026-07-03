@@ -1,0 +1,320 @@
+lesion_id,image_id,dx,dx_type,age,sex,localization,image_path,label
+HAM_0007180,ISIC_0033272,mel,histo,65.0,male,face,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033272.jpg,4
+HAM_0001835,ISIC_0026652,mel,histo,65.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026652.jpg,4
+HAM_0000465,ISIC_0030583,bkl,consensus,35.0,female,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030583.jpg,2
+HAM_0001720,ISIC_0034010,nv,histo,45.0,male,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0034010.jpg,5
+HAM_0006333,ISIC_0024424,nv,histo,35.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0024424.jpg,5
+HAM_0004548,ISIC_0032832,nv,histo,45.0,female,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0032832.jpg,5
+HAM_0006526,ISIC_0026671,nv,histo,55.0,male,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026671.jpg,5
+HAM_0003102,ISIC_0032389,mel,histo,65.0,male,face,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0032389.jpg,4
+HAM_0004260,ISIC_0025525,nv,histo,65.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0025525.jpg,5
+HAM_0004531,ISIC_0025799,bkl,histo,75.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0025799.jpg,2
+HAM_0004483,ISIC_0027487,mel,histo,35.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027487.jpg,4
+HAM_0003776,ISIC_0025347,nv,follow_up,35.0,female,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0025347.jpg,5
+HAM_0000959,ISIC_0030189,bkl,histo,75.0,female,face,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030189.jpg,2
+HAM_0005407,ISIC_0028090,nv,follow_up,55.0,male,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028090.jpg,5
+HAM_0003870,ISIC_0024852,nv,follow_up,70.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0024852.jpg,5
+HAM_0007138,ISIC_0028823,nv,histo,25.0,male,hand,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028823.jpg,5
+HAM_0006665,ISIC_0030775,nv,follow_up,50.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030775.jpg,5
+HAM_0006017,ISIC_0027282,mel,histo,60.0,female,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027282.jpg,4
+HAM_0006274,ISIC_0031351,bcc,histo,75.0,male,chest,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031351.jpg,1
+HAM_0005284,ISIC_0029724,nv,histo,20.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0029724.jpg,5
+HAM_0001245,ISIC_0031168,bkl,histo,60.0,male,chest,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031168.jpg,2
+HAM_0007222,ISIC_0030996,nv,follow_up,45.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030996.jpg,5
+HAM_0000534,ISIC_0025235,mel,histo,45.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0025235.jpg,4
+HAM_0001669,ISIC_0026106,nv,histo,35.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026106.jpg,5
+HAM_0004122,ISIC_0031102,nv,follow_up,40.0,female,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031102.jpg,5
+HAM_0003364,ISIC_0033474,nv,consensus,45.0,female,unknown,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033474.jpg,5
+HAM_0001934,ISIC_0026753,nv,histo,65.0,male,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026753.jpg,5
+HAM_0004627,ISIC_0031597,bcc,histo,85.0,female,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031597.jpg,1
+HAM_0006902,ISIC_0031506,akiec,histo,70.0,male,hand,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031506.jpg,0
+HAM_0000719,ISIC_0026902,bcc,histo,80.0,male,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026902.jpg,1
+HAM_0002457,ISIC_0027457,nv,follow_up,60.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027457.jpg,5
+HAM_0004998,ISIC_0033304,mel,histo,60.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033304.jpg,4
+HAM_0000004,ISIC_0024645,nv,follow_up,40.0,female,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0024645.jpg,5
+HAM_0004811,ISIC_0033129,mel,histo,50.0,female,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033129.jpg,4
+HAM_0003932,ISIC_0026151,nv,histo,55.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026151.jpg,5
+HAM_0005776,ISIC_0029755,bcc,histo,80.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0029755.jpg,1
+HAM_0004830,ISIC_0027248,nv,histo,30.0,female,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027248.jpg,5
+HAM_0001731,ISIC_0028172,nv,follow_up,55.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028172.jpg,5
+HAM_0005329,ISIC_0028686,nv,histo,45.0,female,chest,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028686.jpg,5
+HAM_0000899,ISIC_0029708,nv,follow_up,65.0,female,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0029708.jpg,5
+HAM_0002024,ISIC_0029412,bcc,histo,80.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0029412.jpg,1
+HAM_0004630,ISIC_0028376,bkl,histo,85.0,male,face,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028376.jpg,2
+HAM_0005330,ISIC_0024553,df,consensus,50.0,female,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0024553.jpg,3
+HAM_0004000,ISIC_0032594,nv,histo,35.0,female,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0032594.jpg,5
+HAM_0004670,ISIC_0033190,nv,consensus,,unknown,unknown,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033190.jpg,5
+HAM_0003414,ISIC_0027944,nv,follow_up,45.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027944.jpg,5
+HAM_0005864,ISIC_0025054,nv,follow_up,75.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0025054.jpg,5
+HAM_0002163,ISIC_0030250,nv,follow_up,50.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030250.jpg,5
+HAM_0002732,ISIC_0034022,mel,histo,65.0,male,chest,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0034022.jpg,4
+HAM_0006327,ISIC_0028237,bkl,histo,85.0,female,face,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028237.jpg,2
+HAM_0000498,ISIC_0029067,akiec,histo,65.0,male,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0029067.jpg,0
+HAM_0003847,ISIC_0028560,bkl,histo,85.0,male,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028560.jpg,2
+HAM_0003469,ISIC_0031636,nv,follow_up,75.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031636.jpg,5
+HAM_0002538,ISIC_0030770,vasc,histo,65.0,female,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030770.jpg,6
+HAM_0006713,ISIC_0030527,nv,follow_up,50.0,female,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030527.jpg,5
+HAM_0000044,ISIC_0025152,nv,histo,70.0,male,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0025152.jpg,5
+HAM_0006493,ISIC_0024950,nv,follow_up,45.0,female,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0024950.jpg,5
+HAM_0001535,ISIC_0026653,nv,follow_up,45.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026653.jpg,5
+HAM_0005713,ISIC_0030956,vasc,histo,60.0,female,neck,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030956.jpg,6
+HAM_0003476,ISIC_0029603,bkl,histo,70.0,male,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0029603.jpg,2
+HAM_0005328,ISIC_0032441,mel,histo,75.0,male,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0032441.jpg,4
+HAM_0003722,ISIC_0030052,nv,follow_up,40.0,male,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030052.jpg,5
+HAM_0004033,ISIC_0027452,akiec,histo,70.0,male,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027452.jpg,0
+HAM_0003875,ISIC_0028955,nv,follow_up,35.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028955.jpg,5
+HAM_0000768,ISIC_0028242,nv,follow_up,35.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028242.jpg,5
+HAM_0003171,ISIC_0030122,mel,histo,55.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030122.jpg,4
+HAM_0004118,ISIC_0032593,nv,histo,30.0,female,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0032593.jpg,5
+HAM_0002781,ISIC_0029379,nv,follow_up,40.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0029379.jpg,5
+HAM_0002154,ISIC_0030840,nv,histo,70.0,male,chest,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030840.jpg,5
+HAM_0006559,ISIC_0034056,nv,histo,25.0,female,ear,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0034056.jpg,5
+HAM_0000621,ISIC_0031101,nv,follow_up,45.0,female,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031101.jpg,5
+HAM_0001975,ISIC_0028488,nv,histo,30.0,female,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028488.jpg,5
+HAM_0006625,ISIC_0034043,nv,consensus,75.0,female,foot,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0034043.jpg,5
+HAM_0003529,ISIC_0029871,nv,follow_up,65.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0029871.jpg,5
+HAM_0003073,ISIC_0033444,mel,histo,50.0,male,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033444.jpg,4
+HAM_0000989,ISIC_0028070,nv,follow_up,55.0,male,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028070.jpg,5
+HAM_0007355,ISIC_0024705,bkl,confocal,45.0,female,face,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0024705.jpg,2
+HAM_0005823,ISIC_0024872,nv,follow_up,55.0,male,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0024872.jpg,5
+HAM_0001277,ISIC_0031927,akiec,histo,75.0,male,chest,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031927.jpg,0
+HAM_0000853,ISIC_0027153,nv,follow_up,50.0,female,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027153.jpg,5
+HAM_0001046,ISIC_0034146,nv,histo,40.0,male,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0034146.jpg,5
+HAM_0006044,ISIC_0026986,nv,follow_up,40.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026986.jpg,5
+HAM_0004364,ISIC_0027721,mel,histo,75.0,male,face,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027721.jpg,4
+HAM_0002086,ISIC_0033820,mel,histo,70.0,male,face,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033820.jpg,4
+HAM_0002132,ISIC_0027647,nv,follow_up,65.0,male,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027647.jpg,5
+HAM_0007523,ISIC_0026461,nv,follow_up,55.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026461.jpg,5
+HAM_0002548,ISIC_0028656,bkl,histo,50.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028656.jpg,2
+HAM_0001665,ISIC_0027957,bkl,histo,50.0,male,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027957.jpg,2
+HAM_0002368,ISIC_0024841,nv,histo,60.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0024841.jpg,5
+HAM_0006370,ISIC_0026032,nv,follow_up,50.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026032.jpg,5
+HAM_0007031,ISIC_0025616,mel,histo,70.0,female,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0025616.jpg,4
+HAM_0005169,ISIC_0027557,nv,follow_up,50.0,female,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027557.jpg,5
+HAM_0000988,ISIC_0031186,mel,histo,70.0,male,face,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031186.jpg,4
+HAM_0003941,ISIC_0029745,bcc,histo,35.0,male,face,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0029745.jpg,1
+HAM_0003439,ISIC_0033526,mel,histo,75.0,female,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033526.jpg,4
+HAM_0001979,ISIC_0027527,bkl,histo,55.0,male,face,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027527.jpg,2
+HAM_0005750,ISIC_0030923,nv,histo,70.0,male,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030923.jpg,5
+HAM_0002745,ISIC_0024562,akiec,histo,75.0,male,chest,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0024562.jpg,0
+HAM_0001734,ISIC_0032927,mel,histo,55.0,male,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0032927.jpg,4
+HAM_0004508,ISIC_0033628,nv,consensus,,unknown,unknown,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033628.jpg,5
+HAM_0000325,ISIC_0029832,nv,follow_up,35.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0029832.jpg,5
+HAM_0000523,ISIC_0025978,nv,histo,30.0,female,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0025978.jpg,5
+HAM_0003221,ISIC_0032341,nv,histo,40.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0032341.jpg,5
+HAM_0003538,ISIC_0031246,nv,follow_up,55.0,female,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031246.jpg,5
+HAM_0003002,ISIC_0032830,nv,histo,40.0,male,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0032830.jpg,5
+HAM_0005248,ISIC_0032948,nv,histo,45.0,female,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0032948.jpg,5
+HAM_0000421,ISIC_0034080,nv,consensus,,unknown,unknown,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0034080.jpg,5
+HAM_0006588,ISIC_0031552,bcc,histo,70.0,female,face,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031552.jpg,1
+HAM_0006516,ISIC_0033423,nv,histo,35.0,female,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033423.jpg,5
+HAM_0002634,ISIC_0028392,nv,follow_up,50.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028392.jpg,5
+HAM_0000407,ISIC_0033712,nv,histo,60.0,female,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033712.jpg,5
+HAM_0006602,ISIC_0026598,nv,follow_up,65.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026598.jpg,5
+HAM_0007003,ISIC_0025638,nv,histo,20.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0025638.jpg,5
+HAM_0004038,ISIC_0032990,nv,histo,50.0,female,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0032990.jpg,5
+HAM_0004096,ISIC_0028541,nv,follow_up,50.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028541.jpg,5
+HAM_0001473,ISIC_0029022,bkl,histo,70.0,male,face,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0029022.jpg,2
+HAM_0000085,ISIC_0028421,nv,follow_up,45.0,male,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028421.jpg,5
+HAM_0003530,ISIC_0030929,mel,histo,55.0,female,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030929.jpg,4
+HAM_0005077,ISIC_0028646,bkl,histo,75.0,male,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028646.jpg,2
+HAM_0003928,ISIC_0031755,nv,follow_up,60.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031755.jpg,5
+HAM_0005612,ISIC_0024981,bkl,histo,80.0,male,scalp,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0024981.jpg,2
+HAM_0005795,ISIC_0030296,nv,histo,60.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030296.jpg,5
+HAM_0003419,ISIC_0028767,nv,histo,5.0,male,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028767.jpg,5
+HAM_0002581,ISIC_0032470,nv,histo,40.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0032470.jpg,5
+HAM_0005045,ISIC_0030701,nv,follow_up,40.0,female,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030701.jpg,5
+HAM_0005861,ISIC_0031344,df,histo,65.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031344.jpg,3
+HAM_0000549,ISIC_0026152,akiec,histo,70.0,male,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026152.jpg,0
+HAM_0000636,ISIC_0027104,nv,follow_up,40.0,male,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027104.jpg,5
+HAM_0003646,ISIC_0026518,nv,follow_up,45.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026518.jpg,5
+HAM_0001265,ISIC_0026182,nv,consensus,45.0,female,foot,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026182.jpg,5
+HAM_0007421,ISIC_0025302,df,histo,60.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0025302.jpg,3
+HAM_0004214,ISIC_0034248,nv,consensus,40.0,female,unknown,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0034248.jpg,5
+HAM_0005772,ISIC_0031159,bkl,histo,60.0,female,face,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031159.jpg,2
+HAM_0003211,ISIC_0029942,nv,follow_up,45.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0029942.jpg,5
+HAM_0005004,ISIC_0028708,nv,follow_up,45.0,male,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028708.jpg,5
+HAM_0001480,ISIC_0031753,bkl,histo,70.0,male,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031753.jpg,2
+HAM_0001943,ISIC_0025769,nv,histo,30.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0025769.jpg,5
+HAM_0001763,ISIC_0029029,bkl,histo,60.0,female,hand,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0029029.jpg,2
+HAM_0001038,ISIC_0024706,vasc,consensus,50.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0024706.jpg,6
+HAM_0006558,ISIC_0031639,bkl,histo,65.0,female,genital,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031639.jpg,2
+HAM_0001965,ISIC_0031269,nv,follow_up,40.0,female,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031269.jpg,5
+HAM_0004963,ISIC_0033071,nv,histo,45.0,male,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033071.jpg,5
+HAM_0000839,ISIC_0032049,nv,follow_up,55.0,female,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0032049.jpg,5
+HAM_0000149,ISIC_0025113,bkl,histo,70.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0025113.jpg,2
+HAM_0005360,ISIC_0027264,nv,histo,50.0,female,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027264.jpg,5
+HAM_0007552,ISIC_0033857,nv,histo,70.0,male,chest,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033857.jpg,5
+HAM_0002444,ISIC_0029852,nv,follow_up,35.0,female,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0029852.jpg,5
+HAM_0006458,ISIC_0029221,nv,histo,80.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0029221.jpg,5
+HAM_0003612,ISIC_0024456,nv,follow_up,75.0,female,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0024456.jpg,5
+HAM_0002141,ISIC_0029338,nv,follow_up,50.0,female,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0029338.jpg,5
+HAM_0006846,ISIC_0027199,nv,follow_up,45.0,male,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027199.jpg,5
+HAM_0001752,ISIC_0028925,bkl,consensus,70.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028925.jpg,2
+HAM_0001671,ISIC_0031745,mel,histo,55.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031745.jpg,4
+HAM_0007025,ISIC_0029963,nv,histo,20.0,female,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0029963.jpg,5
+HAM_0001426,ISIC_0029154,nv,follow_up,40.0,female,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0029154.jpg,5
+HAM_0003654,ISIC_0026283,nv,follow_up,50.0,female,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026283.jpg,5
+HAM_0005263,ISIC_0034277,nv,consensus,40.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0034277.jpg,5
+HAM_0003601,ISIC_0027507,mel,histo,60.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027507.jpg,4
+HAM_0004113,ISIC_0033185,bkl,consensus,55.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033185.jpg,2
+HAM_0006809,ISIC_0031690,nv,follow_up,40.0,male,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031690.jpg,5
+HAM_0002152,ISIC_0030234,nv,follow_up,45.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030234.jpg,5
+HAM_0004555,ISIC_0033446,bkl,histo,75.0,male,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033446.jpg,2
+HAM_0005146,ISIC_0026526,bkl,histo,60.0,male,face,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026526.jpg,2
+HAM_0000291,ISIC_0028263,nv,histo,75.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028263.jpg,5
+HAM_0004931,ISIC_0026428,nv,follow_up,50.0,male,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026428.jpg,5
+HAM_0002363,ISIC_0033363,nv,histo,50.0,male,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033363.jpg,5
+HAM_0004773,ISIC_0034148,nv,histo,25.0,female,chest,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0034148.jpg,5
+HAM_0002031,ISIC_0031917,nv,histo,30.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031917.jpg,5
+HAM_0002112,ISIC_0030820,nv,follow_up,55.0,male,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030820.jpg,5
+HAM_0003713,ISIC_0032885,nv,histo,35.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0032885.jpg,5
+HAM_0001050,ISIC_0030317,nv,follow_up,50.0,female,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030317.jpg,5
+HAM_0004435,ISIC_0032146,bcc,histo,80.0,female,neck,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0032146.jpg,1
+HAM_0001676,ISIC_0031587,nv,follow_up,60.0,male,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031587.jpg,5
+HAM_0001033,ISIC_0031658,nv,follow_up,40.0,female,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031658.jpg,5
+HAM_0002318,ISIC_0026797,nv,follow_up,50.0,male,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026797.jpg,5
+HAM_0002675,ISIC_0029641,nv,histo,30.0,female,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0029641.jpg,5
+HAM_0002750,ISIC_0033003,nv,histo,60.0,female,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033003.jpg,5
+HAM_0004546,ISIC_0026561,nv,histo,45.0,female,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026561.jpg,5
+HAM_0005421,ISIC_0028060,nv,histo,75.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028060.jpg,5
+HAM_0006134,ISIC_0030622,nv,follow_up,30.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030622.jpg,5
+HAM_0001309,ISIC_0033629,bkl,histo,60.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033629.jpg,2
+HAM_0007388,ISIC_0031693,nv,follow_up,75.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031693.jpg,5
+HAM_0002023,ISIC_0028540,nv,histo,25.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028540.jpg,5
+HAM_0001964,ISIC_0024733,mel,histo,50.0,male,neck,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0024733.jpg,4
+HAM_0000140,ISIC_0030074,nv,histo,40.0,male,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030074.jpg,5
+HAM_0000909,ISIC_0026981,akiec,histo,55.0,male,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026981.jpg,0
+HAM_0004172,ISIC_0034171,nv,histo,45.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0034171.jpg,5
+HAM_0005664,ISIC_0028016,nv,histo,45.0,male,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028016.jpg,5
+HAM_0001059,ISIC_0029282,nv,follow_up,55.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0029282.jpg,5
+HAM_0007226,ISIC_0027946,nv,follow_up,35.0,female,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027946.jpg,5
+HAM_0006945,ISIC_0028995,bkl,histo,60.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028995.jpg,2
+HAM_0005660,ISIC_0026574,bcc,histo,70.0,male,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026574.jpg,1
+HAM_0000796,ISIC_0028041,mel,histo,60.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028041.jpg,4
+HAM_0000555,ISIC_0026791,nv,follow_up,60.0,female,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026791.jpg,5
+HAM_0004446,ISIC_0031862,nv,follow_up,50.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031862.jpg,5
+HAM_0003230,ISIC_0027640,nv,histo,45.0,male,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027640.jpg,5
+HAM_0001321,ISIC_0033471,nv,histo,70.0,male,chest,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033471.jpg,5
+HAM_0002969,ISIC_0030913,nv,follow_up,65.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030913.jpg,5
+HAM_0006335,ISIC_0028892,nv,follow_up,40.0,male,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028892.jpg,5
+HAM_0002361,ISIC_0026285,nv,follow_up,65.0,male,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026285.jpg,5
+HAM_0004127,ISIC_0031700,nv,histo,55.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031700.jpg,5
+HAM_0002259,ISIC_0028333,nv,follow_up,75.0,male,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028333.jpg,5
+HAM_0006545,ISIC_0033241,mel,histo,50.0,female,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033241.jpg,4
+HAM_0007216,ISIC_0032962,nv,histo,30.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0032962.jpg,5
+HAM_0003807,ISIC_0032655,bkl,consensus,40.0,male,unknown,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0032655.jpg,2
+HAM_0003410,ISIC_0029425,bkl,histo,60.0,female,face,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0029425.jpg,2
+HAM_0003512,ISIC_0034300,nv,histo,35.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0034300.jpg,5
+HAM_0001708,ISIC_0033719,nv,histo,55.0,male,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033719.jpg,5
+HAM_0004792,ISIC_0031604,nv,follow_up,50.0,female,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031604.jpg,5
+HAM_0007002,ISIC_0029515,bcc,histo,80.0,male,face,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0029515.jpg,1
+HAM_0007472,ISIC_0027274,nv,follow_up,60.0,male,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027274.jpg,5
+HAM_0007420,ISIC_0031890,mel,histo,85.0,male,face,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031890.jpg,4
+HAM_0006439,ISIC_0025621,nv,histo,30.0,female,neck,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0025621.jpg,5
+HAM_0004493,ISIC_0030325,nv,follow_up,60.0,male,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030325.jpg,5
+HAM_0002839,ISIC_0025982,bkl,histo,60.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0025982.jpg,2
+HAM_0005840,ISIC_0032260,nv,histo,45.0,female,chest,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0032260.jpg,5
+HAM_0003495,ISIC_0033524,mel,histo,85.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033524.jpg,4
+HAM_0000627,ISIC_0034019,nv,consensus,,unknown,unknown,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0034019.jpg,5
+HAM_0000413,ISIC_0024589,nv,follow_up,45.0,male,genital,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0024589.jpg,5
+HAM_0005691,ISIC_0032457,nv,follow_up,35.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0032457.jpg,5
+HAM_0007052,ISIC_0033794,nv,histo,50.0,male,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033794.jpg,5
+HAM_0003803,ISIC_0033083,nv,histo,5.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033083.jpg,5
+HAM_0002032,ISIC_0030575,mel,histo,25.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030575.jpg,4
+HAM_0000582,ISIC_0025885,bkl,histo,85.0,male,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0025885.jpg,2
+HAM_0007332,ISIC_0027780,bkl,histo,70.0,male,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027780.jpg,2
+HAM_0003028,ISIC_0031870,nv,follow_up,55.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031870.jpg,5
+HAM_0005353,ISIC_0032923,nv,consensus,30.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0032923.jpg,5
+HAM_0001696,ISIC_0027408,nv,histo,80.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027408.jpg,5
+HAM_0003700,ISIC_0029606,mel,histo,40.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0029606.jpg,4
+HAM_0005075,ISIC_0030607,bkl,histo,80.0,male,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030607.jpg,2
+HAM_0003831,ISIC_0026724,nv,follow_up,40.0,male,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026724.jpg,5
+HAM_0000940,ISIC_0033969,vasc,histo,35.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033969.jpg,6
+HAM_0004239,ISIC_0029450,nv,histo,75.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0029450.jpg,5
+HAM_0003470,ISIC_0025979,nv,follow_up,35.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0025979.jpg,5
+HAM_0006711,ISIC_0027010,nv,histo,70.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027010.jpg,5
+HAM_0000142,ISIC_0028501,nv,follow_up,45.0,female,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028501.jpg,5
+HAM_0003282,ISIC_0032474,nv,histo,60.0,male,chest,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0032474.jpg,5
+HAM_0004083,ISIC_0033551,bcc,histo,60.0,female,face,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033551.jpg,1
+HAM_0005762,ISIC_0026216,nv,histo,65.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026216.jpg,5
+HAM_0007477,ISIC_0025950,nv,histo,25.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0025950.jpg,5
+HAM_0005102,ISIC_0028128,nv,histo,55.0,male,chest,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028128.jpg,5
+HAM_0002170,ISIC_0033075,nv,histo,40.0,male,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033075.jpg,5
+HAM_0003325,ISIC_0034190,nv,histo,20.0,female,neck,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0034190.jpg,5
+HAM_0000514,ISIC_0028934,nv,follow_up,80.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028934.jpg,5
+HAM_0004034,ISIC_0027829,akiec,histo,55.0,female,face,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027829.jpg,0
+HAM_0005746,ISIC_0030083,mel,histo,65.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030083.jpg,4
+HAM_0001409,ISIC_0026188,mel,histo,70.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026188.jpg,4
+HAM_0007311,ISIC_0026367,nv,histo,45.0,male,face,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026367.jpg,5
+HAM_0003777,ISIC_0033584,nv,consensus,30.0,female,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033584.jpg,5
+HAM_0001665,ISIC_0031212,bkl,histo,50.0,male,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031212.jpg,2
+HAM_0003987,ISIC_0031813,nv,histo,40.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031813.jpg,5
+HAM_0004624,ISIC_0028329,bcc,histo,80.0,female,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028329.jpg,1
+HAM_0006573,ISIC_0026918,nv,follow_up,50.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026918.jpg,5
+HAM_0006391,ISIC_0032821,nv,histo,70.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0032821.jpg,5
+HAM_0000642,ISIC_0026520,nv,follow_up,45.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026520.jpg,5
+HAM_0001745,ISIC_0030543,nv,histo,65.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030543.jpg,5
+HAM_0006344,ISIC_0026966,nv,follow_up,45.0,female,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026966.jpg,5
+HAM_0005022,ISIC_0027367,bkl,histo,70.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027367.jpg,2
+HAM_0003169,ISIC_0028867,nv,follow_up,45.0,female,hand,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028867.jpg,5
+HAM_0002449,ISIC_0024391,nv,follow_up,50.0,male,chest,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0024391.jpg,5
+HAM_0001215,ISIC_0031531,bcc,histo,70.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031531.jpg,1
+HAM_0001434,ISIC_0028568,bcc,histo,70.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028568.jpg,1
+HAM_0003549,ISIC_0028741,nv,follow_up,45.0,male,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028741.jpg,5
+HAM_0002111,ISIC_0031534,nv,follow_up,45.0,male,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031534.jpg,5
+HAM_0006072,ISIC_0027168,nv,follow_up,30.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027168.jpg,5
+HAM_0004785,ISIC_0030788,nv,follow_up,60.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030788.jpg,5
+HAM_0006306,ISIC_0026242,nv,follow_up,50.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026242.jpg,5
+HAM_0002051,ISIC_0031784,mel,histo,50.0,female,foot,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031784.jpg,4
+HAM_0000464,ISIC_0026223,nv,histo,55.0,female,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026223.jpg,5
+HAM_0007556,ISIC_0028893,nv,follow_up,35.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028893.jpg,5
+HAM_0005228,ISIC_0026702,akiec,histo,80.0,female,face,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026702.jpg,0
+HAM_0006810,ISIC_0030546,nv,histo,20.0,female,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030546.jpg,5
+HAM_0003072,ISIC_0033499,bcc,histo,85.0,male,face,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033499.jpg,1
+HAM_0004405,ISIC_0033500,mel,histo,80.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033500.jpg,4
+HAM_0002818,ISIC_0028570,bcc,histo,85.0,female,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028570.jpg,1
+HAM_0000005,ISIC_0025577,akiec,histo,75.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0025577.jpg,0
+HAM_0001325,ISIC_0030522,bkl,histo,70.0,male,scalp,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030522.jpg,2
+HAM_0004133,ISIC_0026028,nv,histo,40.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026028.jpg,5
+HAM_0006445,ISIC_0033717,mel,histo,60.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033717.jpg,4
+HAM_0004916,ISIC_0026010,nv,follow_up,35.0,female,foot,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026010.jpg,5
+HAM_0006063,ISIC_0026975,nv,follow_up,45.0,female,chest,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026975.jpg,5
+HAM_0005249,ISIC_0032526,mel,histo,40.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0032526.jpg,4
+HAM_0003480,ISIC_0031996,vasc,consensus,70.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031996.jpg,6
+HAM_0003769,ISIC_0027692,nv,follow_up,50.0,female,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027692.jpg,5
+HAM_0002610,ISIC_0030606,vasc,consensus,0.0,female,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030606.jpg,6
+HAM_0006363,ISIC_0024936,nv,histo,25.0,male,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0024936.jpg,5
+HAM_0001607,ISIC_0028508,mel,histo,75.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028508.jpg,4
+HAM_0001948,ISIC_0033993,nv,histo,35.0,male,foot,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033993.jpg,5
+HAM_0000188,ISIC_0027020,nv,histo,40.0,male,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027020.jpg,5
+HAM_0000006,ISIC_0034162,mel,histo,70.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0034162.jpg,4
+HAM_0000358,ISIC_0026976,mel,histo,60.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026976.jpg,4
+HAM_0003944,ISIC_0026672,nv,histo,80.0,male,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026672.jpg,5
+HAM_0005682,ISIC_0028770,nv,follow_up,50.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028770.jpg,5
+HAM_0001848,ISIC_0030587,nv,follow_up,30.0,female,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030587.jpg,5
+HAM_0000060,ISIC_0031953,mel,histo,55.0,male,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031953.jpg,4
+HAM_0005575,ISIC_0029805,bcc,histo,85.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0029805.jpg,1
+HAM_0003956,ISIC_0030190,nv,follow_up,55.0,female,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030190.jpg,5
+HAM_0003877,ISIC_0031537,bkl,histo,60.0,female,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031537.jpg,2
+HAM_0006516,ISIC_0033315,nv,histo,35.0,female,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033315.jpg,5
+HAM_0000416,ISIC_0028162,nv,follow_up,45.0,female,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028162.jpg,5
+HAM_0000397,ISIC_0029499,nv,histo,35.0,male,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0029499.jpg,5
+HAM_0002657,ISIC_0031046,nv,histo,50.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031046.jpg,5
+HAM_0007076,ISIC_0026757,nv,follow_up,35.0,female,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026757.jpg,5
+HAM_0004889,ISIC_0026714,bkl,histo,75.0,male,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0026714.jpg,2
+HAM_0007114,ISIC_0028418,mel,histo,45.0,female,face,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028418.jpg,4
+HAM_0007601,ISIC_0032437,akiec,histo,65.0,male,upper extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0032437.jpg,0
+HAM_0006408,ISIC_0025198,nv,histo,35.0,female,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0025198.jpg,5
+HAM_0003521,ISIC_0032220,mel,histo,70.0,female,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0032220.jpg,4
+HAM_0003482,ISIC_0025150,nv,follow_up,35.0,female,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0025150.jpg,5
+HAM_0004779,ISIC_0024823,mel,histo,35.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0024823.jpg,4
+HAM_0005433,ISIC_0033906,nv,histo,55.0,female,trunk,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0033906.jpg,5
+HAM_0003257,ISIC_0024559,nv,follow_up,75.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0024559.jpg,5
+HAM_0000259,ISIC_0024477,bkl,histo,60.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0024477.jpg,2
+HAM_0005365,ISIC_0027961,nv,consensus,0.0,male,chest,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027961.jpg,5
+HAM_0002490,ISIC_0030694,nv,histo,70.0,female,foot,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0030694.jpg,5
+HAM_0001322,ISIC_0028962,nv,follow_up,45.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0028962.jpg,5
+HAM_0000255,ISIC_0031786,nv,follow_up,70.0,male,abdomen,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0031786.jpg,5
+HAM_0005717,ISIC_0032658,nv,consensus,30.0,male,back,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_2\ISIC_0032658.jpg,5
+HAM_0001248,ISIC_0027530,nv,histo,20.0,male,lower extremity,C:\Users\admin\Downloads\Skin_Scan_AI\HAM10000_images_part_1\ISIC_0027530.jpg,5

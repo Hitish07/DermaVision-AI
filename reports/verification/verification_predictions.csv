@@ -1,0 +1,21 @@
+Image Name,Ground Truth,Predicted Disease,Confidence,Medical Risk,Correct / Incorrect
+ISIC_0024306.jpg,NV,NV,0.8925,Low Risk,Correct
+ISIC_0024307.jpg,NV,NV,0.9805,Low Risk,Correct
+ISIC_0024308.jpg,NV,NV,0.8615,Low Risk,Correct
+ISIC_0024309.jpg,NV,VASC,0.5907,Low Risk,Incorrect
+ISIC_0024310.jpg,MEL,MEL,0.4709,High Risk,Correct
+ISIC_0024311.jpg,NV,NV,0.7952,Low Risk,Correct
+ISIC_0024312.jpg,BKL,NV,0.9453,Low Risk,Incorrect
+ISIC_0024313.jpg,MEL,MEL,0.4327,High Risk,Correct
+ISIC_0024314.jpg,NV,VASC,0.9652,Low Risk,Incorrect
+ISIC_0024315.jpg,MEL,NV,0.5714,Low Risk,Incorrect
+ISIC_0024316.jpg,NV,VASC,0.6289,Low Risk,Incorrect
+ISIC_0024317.jpg,NV,MEL,0.8853,High Risk,Incorrect
+ISIC_0024318.jpg,DF,MEL,0.8890,High Risk,Incorrect
+ISIC_0024319.jpg,NV,VASC,0.4920,Low Risk,Incorrect
+ISIC_0024320.jpg,NV,VASC,0.5152,Low Risk,Incorrect
+ISIC_0024321.jpg,NV,NV,0.9945,Low Risk,Correct
+ISIC_0024322.jpg,NV,NV,0.9861,Low Risk,Correct
+ISIC_0024323.jpg,MEL,NV,0.8759,Low Risk,Incorrect
+ISIC_0024324.jpg,BKL,NV,0.8816,Low Risk,Incorrect
+ISIC_0024325.jpg,NV,NV,0.7940,Low Risk,Correct
