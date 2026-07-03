@@ -7,10 +7,17 @@ import { UploadCloud, CheckCircle, Loader2, AlertCircle } from 'lucide-react'
 export default function Upload() {
   const [file, setFile] = useState<File | null>(null)
   const [preview, setPreview] = useState<string | null>(null)
-  const [status, setStatus] = useState<string>('idle') // idle, uploading, validating, quality, detection, predicting, success, error
+  const [status, setStatus] = useState<string>('idle')
   const [errorMessage, setErrorMessage] = useState<string | null>(null)
-  
+
   const navigate = useNavigate()
+
+  const getHeaders = () => {
+    const token = localStorage.getItem('token')
+    return {
+      Authorization: `Bearer ${token}`
+    }
+  }
 
   const onDrop = useCallback((acceptedFiles: File[]) => {
     const f = acceptedFiles[0]
@@ -31,12 +38,15 @@ export default function Upload() {
     setErrorMessage(null)
 
     try {
+      const headers = getHeaders()
+
       // 1. Upload
       setStatus('uploading')
       const formData = new FormData()
       formData.append('file', file)
       const uploadRes = await fetch(`${API_BASE_URL}/api/upload`, {
         method: 'POST',
+        headers: headers,
         body: formData,
       })
       if (!uploadRes.ok) throw new Error("Failed to upload image")
@@ -44,7 +54,10 @@ export default function Upload() {
 
       // 2. Validate
       setStatus('validating')
-      const valRes = await fetch(`${API_BASE_URL}/api/validate/${scan_id}`, { method: 'POST' })
+      const valRes = await fetch(`${API_BASE_URL}/api/validate/${scan_id}`, {
+        method: 'POST',
+        headers: headers
+      })
       const valData = await valRes.json()
       if (!valData.is_valid) {
         setStatus('error')
@@ -54,7 +67,10 @@ export default function Upload() {
 
       // 3. Quality
       setStatus('quality')
-      const qualRes = await fetch(`${API_BASE_URL}/api/quality/${scan_id}`, { method: 'POST' })
+      const qualRes = await fetch(`${API_BASE_URL}/api/quality/${scan_id}`, {
+        method: 'POST',
+        headers: headers
+      })
       const qualData = await qualRes.json()
       if (qualData.quality_score < 30) {
         setStatus('error')
@@ -64,15 +80,20 @@ export default function Upload() {
 
       // 4. Detection
       setStatus('detection')
-      const detRes = await fetch(`${API_BASE_URL}/api/detect/${scan_id}`, { method: 'POST' })
+      const detRes = await fetch(`${API_BASE_URL}/api/detect/${scan_id}`, {
+        method: 'POST',
+        headers: headers
+      })
       await detRes.json()
-      // We no longer halt the pipeline if lesion_detected is false. We allow it to proceed to prediction anyway.
 
       // 5. Prediction
       setStatus('predicting')
-      const predRes = await fetch(`${API_BASE_URL}/api/predict/${scan_id}`, { method: 'POST' })
+      const predRes = await fetch(`${API_BASE_URL}/api/predict/${scan_id}`, {
+        method: 'POST',
+        headers: headers
+      })
       if (!predRes.ok) throw new Error("Failed during prediction")
-      
+
       setStatus('success')
       setTimeout(() => navigate(`/dashboard/${scan_id}`), 800)
 
@@ -93,7 +114,7 @@ export default function Upload() {
   const getStepStatus = (stepId: string) => {
     const currentIndex = steps.findIndex(s => s.id === status)
     const stepIndex = steps.findIndex(s => s.id === stepId)
-    
+
     if (status === 'success') return 'complete'
     if (status === 'error' && currentIndex === stepIndex) return 'error'
     if (currentIndex > stepIndex) return 'complete'
@@ -103,14 +124,14 @@ export default function Upload() {
 
   return (
     <div className="min-h-screen bg-slate-50 p-8 flex flex-col items-center justify-center font-sans text-slate-900">
-      
+
       <div className="max-w-4xl w-full bg-white/70 backdrop-blur-xl rounded-3xl shadow-xl overflow-hidden flex flex-col md:flex-row border border-white">
-        
+
         {/* Left Side: Dropzone */}
         <div className="md:w-1/2 p-8 md:p-12 bg-gradient-to-br from-blue-50/50 to-indigo-50/50 border-r border-slate-100 flex flex-col items-center justify-center">
           <h2 className="text-3xl font-bold text-slate-800 mb-2 text-center tracking-tight">Upload Lesion</h2>
           <p className="text-slate-500 mb-8 text-center text-sm">Secure, encrypted clinical pipeline</p>
-          
+
           <div {...getRootProps()} className={`w-full p-8 border-2 border-dashed rounded-3xl flex flex-col items-center justify-center cursor-pointer transition-all ${isDragActive ? 'border-blue-500 bg-blue-50' : 'border-slate-300 hover:border-blue-400 hover:bg-slate-50/50'}`}>
             <input {...getInputProps()} />
             {preview ? (
@@ -124,8 +145,8 @@ export default function Upload() {
               {isDragActive ? "Drop image here..." : preview ? "Click or drag to replace image" : "Drag & drop skin lesion image here"}
             </p>
           </div>
-          
-          <button 
+
+          <button
             onClick={handleAnalyze}
             disabled={!file || (status !== 'idle' && status !== 'error')}
             className={`mt-8 w-full py-4 rounded-full font-bold text-lg shadow-lg transition-all flex items-center justify-center space-x-2 ${
@@ -145,7 +166,7 @@ export default function Upload() {
         {/* Right Side: Animated Stepper Pipeline */}
         <div className="md:w-1/2 p-8 md:p-12 bg-white flex flex-col justify-center">
           <h3 className="text-xl font-bold text-slate-800 mb-8 tracking-tight">Multi-Stage Pipeline</h3>
-          
+
           <div className="space-y-6">
             {steps.map((step, idx) => {
               const stepStatus = getStepStatus(step.id)
@@ -156,7 +177,7 @@ export default function Upload() {
                          backgroundColor: stepStatus === 'complete' ? '#22c55e' : stepStatus === 'active' ? '#3b82f6' : stepStatus === 'error' ? '#ef4444' : '#f1f5f9',
                          color: stepStatus !== 'pending' ? 'white' : '#94a3b8'
                        }}>
-                    {stepStatus === 'complete' ? <CheckCircle className="w-8 h-8" /> : 
+                    {stepStatus === 'complete' ? <CheckCircle className="w-8 h-8" /> :
                      stepStatus === 'active' ? <Loader2 className="w-8 h-8 animate-spin" /> :
                      stepStatus === 'error' ? <AlertCircle className="w-8 h-8" /> :
                      <span className="font-bold text-lg">{idx + 1}</span>}
@@ -177,7 +198,7 @@ export default function Upload() {
               <span>{errorMessage}</span>
             </div>
           )}
-          
+
         </div>
       </div>
     </div>

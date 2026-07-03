@@ -1,4 +1,3 @@
-
 import { API_BASE_URL } from '../config'
 import { useState, useEffect } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
@@ -7,16 +6,25 @@ import { ShieldAlert, AlertTriangle, ArrowLeft, Download, Share2, Activity, Load
 export default function Dashboard() {
   const { id } = useParams()
   const navigate = useNavigate()
-  
+
   const [data, setData] = useState<any>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [activeTab, setActiveTab] = useState('original')
-  
+
+  const getHeaders = () => {
+    const token = localStorage.getItem('token')
+    return {
+      Authorization: `Bearer ${token}`
+    }
+  }
+
   useEffect(() => {
     const fetchScan = async () => {
       try {
-        const res = await fetch(`${API_BASE_URL}/api/scan/${id}`)
+        const res = await fetch(`${API_BASE_URL}/api/scan/${id}`, {
+          headers: getHeaders()
+        })
         if (!res.ok) throw new Error("Failed to fetch scan results")
         const result = await res.json()
         setData(result)
@@ -27,22 +35,26 @@ export default function Dashboard() {
       }
     }
     fetchScan()
-    
+
     // Poll for async XAI updates every 3 seconds if status is completed (XAI might be pending)
     const interval = setInterval(async () => {
       try {
-        const res = await fetch(`${API_BASE_URL}/api/scan/${id}/status`)
+        const res = await fetch(`${API_BASE_URL}/api/scan/${id}/status`, {
+          headers: getHeaders()
+        })
         const statusData = await res.json()
         if (statusData.status === 'xai_completed' || statusData.status === 'xai_failed') {
           // Re-fetch full data
-          const fullRes = await fetch(`${API_BASE_URL}/api/scan/${id}`)
+          const fullRes = await fetch(`${API_BASE_URL}/api/scan/${id}`, {
+            headers: getHeaders()
+          })
           const fullResult = await fullRes.json()
           setData(fullResult)
           clearInterval(interval)
         }
       } catch {}
     }, 3000)
-    
+
     return () => clearInterval(interval)
   }, [id])
 
@@ -73,7 +85,7 @@ export default function Dashboard() {
   return (
     <div className="min-h-screen bg-slate-50 p-8 font-sans text-slate-900">
       <div className="max-w-7xl mx-auto">
-        
+
         {/* Header */}
         <div className="flex justify-between items-center mb-8 bg-white p-4 rounded-2xl shadow-sm border border-slate-100">
           <div className="flex items-center space-x-4">
@@ -86,7 +98,7 @@ export default function Dashboard() {
             <button className="flex items-center space-x-2 px-4 py-2 bg-slate-100 border border-slate-200 rounded-xl shadow-sm text-slate-700 font-medium hover:bg-slate-200 transition">
               <Share2 className="w-4 h-4" /> <span>Share</span>
             </button>
-            <button 
+            <button
               onClick={() => window.open(`${API_BASE_URL}/api/scan/${id}/report`, '_blank')}
               className="flex items-center space-x-2 px-5 py-2 bg-blue-600 text-white rounded-xl shadow-md font-semibold hover:bg-blue-700 transition"
             >
@@ -109,13 +121,13 @@ export default function Dashboard() {
         )}
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-          
+
           {/* LEFT: Image Gallery & Processing Pipeline (7 cols) */}
           <div className="lg:col-span-7 space-y-6">
             <div className="bg-white p-2 rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
               <div className="aspect-square bg-slate-900 rounded-2xl overflow-hidden relative flex items-center justify-center">
-                <img 
-                  src={tabs.find(t => t.id === activeTab)?.src} 
+                <img
+                  src={tabs.find(t => t.id === activeTab)?.src}
                   alt="Medical Scan"
                   className="w-full h-full object-contain"
                 />
@@ -129,8 +141,8 @@ export default function Dashboard() {
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   className={`px-5 py-2.5 rounded-xl whitespace-nowrap text-sm font-bold transition-all ${
-                    activeTab === tab.id 
-                    ? 'bg-blue-600 text-white shadow-md' 
+                    activeTab === tab.id
+                    ? 'bg-blue-600 text-white shadow-md'
                     : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 hover:border-slate-300'
                   }`}
                 >
@@ -138,7 +150,7 @@ export default function Dashboard() {
                 </button>
               ))}
             </div>
-            
+
             {/* Quality Metrics Panel */}
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
               <h3 className="text-sm font-bold text-slate-800 mb-6 flex items-center uppercase tracking-wide">
@@ -175,7 +187,7 @@ export default function Dashboard() {
 
           {/* RIGHT: Diagnostics (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
-            
+
             {/* Primary Result */}
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100">
               <div className="flex justify-between items-start mb-6">
@@ -187,7 +199,7 @@ export default function Dashboard() {
                   {data.risk_level} Risk
                 </div>
               </div>
-              
+
               <div className="mb-8">
                 <div className="flex justify-between text-sm font-bold mb-2">
                   <span className="text-slate-600">Model Confidence</span>
@@ -230,8 +242,8 @@ export default function Dashboard() {
               <div className="flex items-start space-x-3">
                 <ShieldAlert className="w-5 h-5 text-blue-500 shrink-0 mt-0.5" />
                 <p className="text-xs text-slate-500 font-medium leading-relaxed">
-                  <strong className="text-slate-700">Medical Disclaimer:</strong> DermaVision AI is an experimental clinical decision-support tool. 
-                  The predictions provided are for educational purposes and do not constitute a medical diagnosis. 
+                  <strong className="text-slate-700">Medical Disclaimer:</strong> DermaVision AI is an experimental clinical decision-support tool.
+                  The predictions provided are for educational purposes and do not constitute a medical diagnosis.
                   Always consult a certified healthcare professional.
                 </p>
               </div>

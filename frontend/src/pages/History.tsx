@@ -21,9 +21,18 @@ export default function History() {
   const [sortAsc, setSortAsc] = useState(false)
   const navigate = useNavigate()
 
+  const getHeaders = () => {
+    const token = localStorage.getItem('token')
+    return {
+      Authorization: `Bearer ${token}`
+    }
+  }
+
   const fetchHistory = async () => {
     try {
-      const res = await fetch(`${API_BASE_URL}/api/history`)
+      const res = await fetch(`${API_BASE_URL}/api/history`, {
+        headers: getHeaders()
+      })
       const data = await res.json()
       setHistory(data)
     } catch (err) {
@@ -39,7 +48,10 @@ export default function History() {
 
   const handleDelete = async (id: string) => {
     try {
-      await fetch(`${API_BASE_URL}/api/history/${id}`, { method: 'DELETE' })
+      await fetch(`${API_BASE_URL}/api/history/${id}`, {
+        method: 'DELETE',
+        headers: getHeaders()
+      })
       setHistory(prev => prev.filter(item => item.id !== id))
     } catch (err) {
       console.error(err)
@@ -55,7 +67,7 @@ export default function History() {
   }
 
   const sortedAndFiltered = history
-    .filter(item => 
+    .filter(item =>
       item.disease.toLowerCase().includes(search.toLowerCase()) ||
       item.id.includes(search)
     )
@@ -82,15 +94,15 @@ export default function History() {
           </button>
           <h1 className="text-2xl font-bold tracking-tight">Clinical Scan History</h1>
         </div>
-        
+
         <div className="bg-white rounded-3xl shadow-sm border border-slate-100 overflow-hidden">
-          
+
           <div className="p-6 border-b border-slate-100 flex justify-between items-center bg-slate-50/50">
             <div className="relative">
               <Search className="w-5 h-5 text-slate-400 absolute left-3 top-1/2 transform -translate-y-1/2" />
-              <input 
-                type="text" 
-                placeholder="Search disease or ID..." 
+              <input
+                type="text"
+                placeholder="Search disease or ID..."
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 className="pl-10 pr-4 py-2.5 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-500 w-72 text-sm shadow-sm"
@@ -142,21 +154,21 @@ export default function History() {
                       <td className="p-5 font-bold text-slate-700">{item.quality_score.toFixed(1)}%</td>
                       <td className="p-5 pr-6">
                         <div className="flex items-center justify-end space-x-2 opacity-0 group-hover:opacity-100 transition-opacity">
-                          <button 
+                          <button
                             onClick={() => window.open(`${API_BASE_URL}/api/scan/${item.id}/report`, '_blank')}
                             className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors tooltip"
                             title="Download PDF"
                           >
                             <Download className="w-4 h-4" />
                           </button>
-                          <button 
+                          <button
                             onClick={() => navigate(`/dashboard/${item.id}`)}
                             className="p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors tooltip"
                             title="View Dashboard"
                           >
                             <ExternalLink className="w-4 h-4" />
                           </button>
-                          <button 
+                          <button
                             onClick={() => handleDelete(item.id)}
                             className="p-2 text-red-500 hover:bg-red-50 rounded-lg transition-colors tooltip"
                             title="Delete Scan"
