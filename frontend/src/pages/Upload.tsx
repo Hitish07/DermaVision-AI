@@ -65,7 +65,7 @@ export default function Upload() {
       // 4. Detection
       setStatus('detection')
       const detRes = await fetch(`${API_BASE_URL}/api/detect/${scan_id}`, { method: 'POST' })
-      const detData = await detRes.json()
+      await detRes.json()
       // We no longer halt the pipeline if lesion_detected is false. We allow it to proceed to prediction anyway.
 
       // 5. Prediction

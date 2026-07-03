@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ShieldCheck, Activity, Cpu, ArrowRight, Microscope, Scan, ShieldAlert } from 'lucide-react';
+import { ShieldCheck, Activity, ArrowRight, Microscope, Scan, ShieldAlert } from 'lucide-react';
 
 const LandingPage = () => {
   const navigate = useNavigate();
