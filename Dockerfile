@@ -7,8 +7,9 @@ WORKDIR /app
 RUN apt-get update && apt-get install -y \
     libgl1 \
     libglib2.0-0 \
-    && rm -rf /var/lib/apt/lists/*
-# Install python dependencies
+    build-essential \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*# Install python dependencies
 # First copy requirements from the root project
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
