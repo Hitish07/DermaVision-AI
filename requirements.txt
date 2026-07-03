@@ -13,4 +13,11 @@ shap
 lime
 vit_keras
 tensorboard  
- 
+psycopg2-binary
+fastapi
+uvicorn[standard]
+sqlalchemy
+python-multipart
+pydantic
+reportlab
+Pillow
