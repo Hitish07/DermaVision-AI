@@ -1,4 +1,4 @@
-﻿from sqlalchemy import Column, Integer, String, Float, DateTime, Boolean
+from sqlalchemy import Column, Integer, String, Float, DateTime, Boolean
 from datetime import datetime
 from .database import Base
 
@@ -15,7 +15,7 @@ class User(Base):
 class ScanHistory(Base):
     __tablename__ = "scan_history"
 
-    id = Column(Integer, primary_key=True, index=True)
+    id = Column(String, primary_key=True, index=True)
 
     predicted_class = Column(String)
     confidence = Column(Float)
