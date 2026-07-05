@@ -1,0 +1,4 @@
+title: Skin Scan AI
+description: Clinical skin lesion analysis with AI
+sdk: docker
+app_port: 8000
