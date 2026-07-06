@@ -7,9 +7,9 @@ import shutil
 from pathlib import Path
 
 from ..database import get_db
+from ..auth import get_current_user
 from ..models import ScanHistory
 from ..schemas import ValidationResponse, QualityResponse, DetectionResponse, PredictResponse, AsyncXAIResponse, FullScanDetails
-from ..auth import get_current_user
 
 from ..services.validation import ImageValidator
 from ..services.quality_assessment import assess_image_quality

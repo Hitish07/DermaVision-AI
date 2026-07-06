@@ -21,6 +21,7 @@ export default function History() {
   const [sortAsc, setSortAsc] = useState(false)
   const navigate = useNavigate()
 
+
   const getHeaders = () => {
     const token = localStorage.getItem('token')
     return {
