@@ -18,4 +18,4 @@ COPY . .
 RUN mkdir -p api/uploads
 
 # Run on port 7860 for HF Spaces
-CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "7860"]
+CMD ["uvicorn", "api.main:app", "--host", "0.0.0.0", "--port", "7860"]
