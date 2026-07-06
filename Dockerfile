@@ -4,7 +4,7 @@ WORKDIR /app
 
 # Install system dependencies for TensorFlow
 RUN apt-get update && apt-get install -y \
-    libsm6 libxext6 libxrender-dev build-essential \
+    libsm6 libxext6 libxrender-dev build-essential libgl1 libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
